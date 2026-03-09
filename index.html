@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mes Écrits | Carnet d'Hermann Gratias</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+    <body>
+        <header>
+            <button type="button" class="btn-ajouter" id="btn-ajouter">
+                + Ajouter un nouvel écrit
+            </button>
+            <div class="logo">
+                <span class="logo-icon">"</span>
+                <h1>Mes écrits</h1>
+                <p class="tagline">Un carnet pour mes textes et pensées</p>
+            </div>
+        </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-image">
+                <div class="quote-symbol" aria-hidden="true">"</div>
+            </div>
+        </section>
+
+        <section class="citations">
+            <h2>Mes écrits récents</h2>
+            <div class="citations-grid">
+                <article class="citation-card">
+                    <button type="button" class="btn-pin" aria-label="Épingler cet écrit" title="Épingler">📌</button>
+                    <blockquote>
+                        "Chaque jour est une page blanche que je remplis à ma façon."
+                    </blockquote>
+                    <cite>— Hermann Gratias</cite>
+                    <span class="categorie">Pensée</span>
+                    <span class="voir-tout">Cliquer pour voir tout le texte</span>
+                </article>
+                <article class="citation-card">
+                    <button type="button" class="btn-pin" aria-label="Épingler cet écrit" title="Épingler">📌</button>
+                    <blockquote>
+                        "J'écris pour mettre de l'ordre dans le chaos de mes idées."
+                    </blockquote>
+                    <cite>— Hermann Gratias</cite>
+                    <span class="categorie">Texte court</span>
+                    <span class="voir-tout">Cliquer pour voir tout le texte</span>
+                </article>
+                <article class="citation-card">
+                    <button type="button" class="btn-pin" aria-label="Épingler cet écrit" title="Épingler">📌</button>
+                    <blockquote>
+                        "Les mots sont mes repères quand tout semble flou autour de moi."
+                    </blockquote>
+                    <cite>— Hermann Gratias</cite>
+                    <span class="categorie">Réflexion</span>
+                    <span class="voir-tout">Cliquer pour voir tout le texte</span>
+                </article>
+                <article class="citation-card">
+                    <button type="button" class="btn-pin" aria-label="Épingler cet écrit" title="Épingler">📌</button>
+                    <blockquote>
+                        "Parfois, quelques lignes suffisent pour dire ce que je n'arrive pas à expliquer à voix haute."
+                    </blockquote>
+                    <cite>— Hermann Gratias</cite>
+                    <span class="categorie">Confession</span>
+                    <span class="voir-tout">Cliquer pour voir tout le texte</span>
+                </article>
+                <article class="citation-card">
+                    <button type="button" class="btn-pin" aria-label="Épingler cet écrit" title="Épingler">📌</button>
+                    <blockquote>
+                        "Mes écrits ne cherchent pas à être parfaits, seulement honnêtes."
+                    </blockquote>
+                    <cite>— Hermann Gratias</cite>
+                    <span class="categorie">Journal</span>
+                    <span class="voir-tout">Cliquer pour voir tout le texte</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="formulaire-section" id="formulaire-section">
+            <div class="formulaire-header">
+                <h2>Ajouter un nouvel écrit</h2>
+                <button type="button" class="btn-fermer-form" aria-label="Fermer le formulaire">×</button>
+            </div>
+            <form id="form-citation" class="form-citation">
+                <div class="form-group">
+                    <label for="citation">Votre texte *</label>
+                    <textarea id="citation" name="citation" rows="3" required placeholder="Écris ici ton texte, pensée ou poème..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="auteur">Signature *</label>
+                    <input type="text" id="auteur" name="auteur" required placeholder="Ex: Hermann Gratias">
+                </div>
+                <div class="form-group">
+                    <label for="categorie">Catégorie</label>
+                    <select id="categorie" name="categorie">
+                        <option value="pensee">Pensée</option>
+                        <option value="poeme">Poème</option>
+                        <option value="texte-court">Texte court</option>
+                        <option value="journal">Journal</option>
+                        <option value="citation">Citation</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
+                <button type="submit">Ajouter mon écrit</button>
+            </form>
+            <p id="form-message" class="form-message" aria-live="polite"></p>
+        </section>
+
+        <section class="liens">
+            <h2>Ressources pour nourrir mes écrits</h2>
+            <div class="liens-grid">
+                <a href="https://fr.wikiquote.org/wiki/Accueil" target="_blank" rel="noopener noreferrer">Idées de citations</a>
+                <a href="https://blog.hubspot.fr/marketing/techniques-ecriture" target="_blank" rel="noopener noreferrer">Techniques d'écriture</a>
+                <a href="https://www.scribbr.fr/style-academique/style-decriture/" target="_blank" rel="noopener noreferrer">Améliorer son style</a>
+            </div>
+        </section>
+    </main>
+
+        <footer>
+            <p>© 2026 Mes écrits — Hermann Gratias — Projet Cloud PaaS</p>
+        </footer>
+
+    <!-- Modal pour afficher le texte complet -->
+    <div id="modal-overlay" class="modal-overlay" aria-hidden="true">
+        <div class="modal-contenu">
+            <button type="button" class="modal-fermer" aria-label="Fermer">×</button>
+            <blockquote id="modal-texte"></blockquote>
+            <cite id="modal-auteur"></cite>
+            <span id="modal-categorie" class="categorie"></span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

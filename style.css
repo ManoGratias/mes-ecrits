@@ -1,0 +1,484 @@
+/* ============================================
+   Citations du Jour - Style responsive
+   ============================================ */
+
+:root {
+    --color-bg: #0f0f12;
+    --color-surface: #1a1a20;
+    --color-surface-hover: #24242c;
+    --color-accent: #e8b86d;
+    --color-accent-soft: #c9a055;
+    --color-text: #e8e6e3;
+    --color-text-muted: #9a9691;
+    --color-border: #2d2d35;
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'Source Sans 3', system-ui, sans-serif;
+    --radius: 12px;
+    --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    position: relative;
+    background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-bg) 100%);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.logo-icon {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 3rem;
+    color: var(--color-accent);
+    line-height: 1;
+}
+
+header h1 {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+    font-weight: 600;
+    margin-top: 0.25rem;
+}
+
+.tagline {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+}
+
+/* Hero / Image section */
+.hero {
+    padding: 2rem 1.5rem;
+}
+
+.hero-image {
+    max-width: 200px;
+    margin: 0 auto;
+    aspect-ratio: 1;
+    background: linear-gradient(145deg, var(--color-surface) 0%, var(--color-surface-hover) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--color-accent);
+    box-shadow: var(--shadow);
+}
+
+.quote-symbol {
+    font-family: var(--font-display);
+    font-size: 5rem;
+    color: var(--color-accent);
+    opacity: 0.6;
+}
+
+.btn-ajouter {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    background: var(--color-accent);
+    color: var(--color-bg);
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-ajouter:hover {
+    background: var(--color-accent-soft);
+}
+
+/* Citations section */
+.citations {
+    padding: 2rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.citations h2,
+.formulaire-section h2,
+.liens h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    margin-bottom: 1.5rem;
+    color: var(--color-accent);
+}
+
+.citations-grid {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: 1fr;
+}
+
+/* Bouton épingler */
+.citation-card {
+    position: relative;
+}
+
+.btn-pin {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: rgba(232, 184, 109, 0.15);
+    border: 1px solid rgba(232, 184, 109, 0.5);
+    border-radius: 4px;
+    padding: 0.2rem 0.3rem;
+    font-size: 0.75rem;
+    line-height: 1;
+    cursor: pointer;
+    color: var(--color-accent);
+    transition: background 0.2s;
+}
+
+.btn-pin:hover {
+    background: rgba(232, 184, 109, 0.25);
+}
+
+.citation-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 1.5rem 2rem 1.5rem 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.citation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+    border-color: var(--color-accent);
+}
+
+.citation-nouvelle {
+    animation: fadeIn 0.5s ease-out;
+    border-color: var(--color-accent);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.citation-card {
+    cursor: pointer;
+}
+
+.citation-card blockquote {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 0.75rem;
+    color: var(--color-text);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 4.2em;
+}
+
+.citation-card .voir-tout {
+    font-size: 0.8rem;
+    color: var(--color-accent);
+    margin-top: 0.25rem;
+    opacity: 0.9;
+}
+
+.citation-card cite {
+    display: block;
+    font-style: normal;
+    font-size: 0.9rem;
+    color: var(--color-accent);
+}
+
+.categorie {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    background: rgba(232, 184, 109, 0.15);
+    color: var(--color-accent-soft);
+    border-radius: 6px;
+}
+
+/* Formulaire */
+.formulaire-section {
+    padding: 2rem 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+    display: none;
+}
+
+.formulaire-section.ouvert {
+    display: block;
+}
+
+.formulaire-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.btn-fermer-form {
+    background: transparent;
+    border: none;
+    color: var(--color-text-muted);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.25rem;
+    line-height: 1;
+}
+
+.btn-fermer-form:hover {
+    color: var(--color-accent);
+}
+
+.form-citation {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    color: var(--color-text);
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 0.9rem 1.5rem;
+    background: var(--color-accent);
+    color: var(--color-bg);
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+    background: var(--color-accent-soft);
+}
+
+.form-message {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.form-message.success {
+    background: rgba(76, 175, 80, 0.2);
+    color: #81c784;
+}
+
+.form-message.error {
+    background: rgba(244, 67, 54, 0.2);
+    color: #e57373;
+}
+
+/* Liens */
+.liens {
+    padding: 2rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.liens-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.liens-grid a {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    background: var(--color-surface);
+    color: var(--color-accent);
+    text-decoration: none;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    transition: all 0.2s;
+}
+
+.liens-grid a:hover {
+    background: var(--color-surface-hover);
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+}
+
+/* Modal - texte complet */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.modal-overlay.ouvert {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-contenu {
+    position: relative;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 2rem 2.5rem 2rem 2rem;
+    max-width: 600px;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: var(--shadow);
+    transform: scale(0.95);
+    transition: transform 0.3s;
+}
+
+.modal-overlay.ouvert .modal-contenu {
+    transform: scale(1);
+}
+
+.modal-contenu blockquote {
+    font-size: 1.15rem;
+    font-style: italic;
+    line-height: 1.7;
+    color: var(--color-text);
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.modal-contenu cite {
+    display: block;
+    margin-top: 1rem;
+    font-style: normal;
+    color: var(--color-accent);
+}
+
+.modal-contenu .categorie {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    background: rgba(232, 184, 109, 0.15);
+    color: var(--color-accent-soft);
+    border-radius: 6px;
+}
+
+.modal-fermer {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    color: var(--color-text-muted);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.25rem;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.modal-fermer:hover {
+    color: var(--color-accent);
+}
+
+/* Footer */
+footer {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--color-border);
+}
+
+/* ============================================
+   Responsive - Tablette
+   ============================================ */
+@media (min-width: 600px) {
+    .citations-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ============================================
+   Responsive - Desktop
+   ============================================ */
+@media (min-width: 900px) {
+    .citations-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero-image {
+        max-width: 180px;
+    }
+}
