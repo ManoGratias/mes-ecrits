@@ -1,6 +1,10 @@
-# Citations du Jour
+# Mes écrits
 
-Mini site web de citations motivantes — Projet Cloud PaaS (Vercel & Azure)
+Carnet personnel d'écrits — Projet Cloud PaaS (Vercel & Azure)
+
+## Partage des écrits (Supabase)
+
+Pour que tout le monde voie les mêmes écrits sur tous les appareils, configure Supabase. Voir **SUPABASE_SETUP.md** pour les instructions.
 
 ## Contenu
 

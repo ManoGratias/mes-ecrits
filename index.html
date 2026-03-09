@@ -30,52 +30,8 @@
 
         <section class="citations">
             <h2>Mes écrits récents</h2>
-            <div class="citations-grid">
-                <article class="citation-card">
-                    <button type="button" class="btn-pin" aria-label="Épingler cet écrit" title="Épingler">📌</button>
-                    <blockquote>
-                        "Chaque jour est une page blanche que je remplis à ma façon."
-                    </blockquote>
-                    <cite>— Hermann Gratias</cite>
-                    <span class="categorie">Pensée</span>
-                    <span class="voir-tout">Cliquer pour voir tout le texte</span>
-                </article>
-                <article class="citation-card">
-                    <button type="button" class="btn-pin" aria-label="Épingler cet écrit" title="Épingler">📌</button>
-                    <blockquote>
-                        "J'écris pour mettre de l'ordre dans le chaos de mes idées."
-                    </blockquote>
-                    <cite>— Hermann Gratias</cite>
-                    <span class="categorie">Texte court</span>
-                    <span class="voir-tout">Cliquer pour voir tout le texte</span>
-                </article>
-                <article class="citation-card">
-                    <button type="button" class="btn-pin" aria-label="Épingler cet écrit" title="Épingler">📌</button>
-                    <blockquote>
-                        "Les mots sont mes repères quand tout semble flou autour de moi."
-                    </blockquote>
-                    <cite>— Hermann Gratias</cite>
-                    <span class="categorie">Réflexion</span>
-                    <span class="voir-tout">Cliquer pour voir tout le texte</span>
-                </article>
-                <article class="citation-card">
-                    <button type="button" class="btn-pin" aria-label="Épingler cet écrit" title="Épingler">📌</button>
-                    <blockquote>
-                        "Parfois, quelques lignes suffisent pour dire ce que je n'arrive pas à expliquer à voix haute."
-                    </blockquote>
-                    <cite>— Hermann Gratias</cite>
-                    <span class="categorie">Confession</span>
-                    <span class="voir-tout">Cliquer pour voir tout le texte</span>
-                </article>
-                <article class="citation-card">
-                    <button type="button" class="btn-pin" aria-label="Épingler cet écrit" title="Épingler">📌</button>
-                    <blockquote>
-                        "Mes écrits ne cherchent pas à être parfaits, seulement honnêtes."
-                    </blockquote>
-                    <cite>— Hermann Gratias</cite>
-                    <span class="categorie">Journal</span>
-                    <span class="voir-tout">Cliquer pour voir tout le texte</span>
-                </article>
+            <div class="citations-grid" id="citations-grid">
+                <!-- Les écrits sont chargés depuis le script -->
             </div>
         </section>
 
@@ -133,6 +89,8 @@
         </div>
     </div>
 
+    <script src="supabase-config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="script.js"></script>
 </body>
 </html>

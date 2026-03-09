@@ -126,6 +126,12 @@ header h1 {
     color: var(--color-accent);
 }
 
+.loading {
+    color: var(--color-text-muted);
+    text-align: center;
+    padding: 2rem;
+}
+
 .citations-grid {
     display: grid;
     gap: 1.25rem;
